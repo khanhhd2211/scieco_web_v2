@@ -24,10 +24,10 @@ export default function NavBar () {
 			<div className={styles.logo}><Link className="no-style-hlink" href="/"><span>S</span>ci<span>E</span>co</Link></div>
 			<div className={styles.wrapBtn}>
 				<div><Link id="nav-btn-1" className="no-style-hlink" href="/">Trang chủ</Link></div>
-				<div><a id="nav-btn-2" className="no-style-hlink" href="/dich-vu/">Dịch vụ</a></div>
-				<div><a id="nav-btn-5" className="no-style-hlink" href="https://bai-viet.scienceforeconomics.com/">Bài viết</a></div>
-				<div><a id="nav-btn-3" className="no-style-hlink" href="/ve-chung-toi/">Về chúng tôi</a></div>
-				<div><a id="nav-btn-4" className="no-style-hlink" href="/ket-noi/">Kết nối</a></div>
+				<div><Link id="nav-btn-2" className="no-style-hlink" href="/dich-vu/">Dịch vụ</Link></div>
+				<div><Link id="nav-btn-5" className="no-style-hlink" href="/bai-viet/">Bài viết</Link></div>
+				<div><Link id="nav-btn-3" className="no-style-hlink" href="/ve-chung-toi/">Về chúng tôi</Link></div>
+				<div><Link id="nav-btn-4" className="no-style-hlink" href="/ket-noi/">Kết nối</Link></div>
 			</div>
 		</div>
 	);
