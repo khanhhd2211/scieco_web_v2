@@ -2,7 +2,7 @@
 import styles from '@/styles/navbar.module.css'
 import Link from 'next/link';
 import debounce from '@/utils/debounce';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function NavBar () {
 	const [stick, setStick] = useState<boolean>(false);
@@ -17,7 +17,10 @@ export default function NavBar () {
 	}
 
 	const debouncedAddStickClass = debounce(addStickClass, 100)
-	window.addEventListener("scroll", debouncedAddStickClass);
+	useEffect(() => {
+		window.addEventListener("scroll", debouncedAddStickClass)
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [])
 
 	return (
 		<div className={`${styles.navbar} ${stick ? styles.stick : ''}`}>
