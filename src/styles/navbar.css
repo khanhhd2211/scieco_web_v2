@@ -1,0 +1,121 @@
+.nav-bar {
+  --top-margin: 40px;
+}
+
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  z-index: 1000;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  justify-content: center;
+  background-color: white;
+  align-items: center;
+  color: var(--text-color);
+  border-radius: 0 0 20px 20px;
+  transition: box-shadow .2s ease-in-out;
+}
+
+.nav-bar .logo {
+  font-weight: 600;
+  font-size: 35px;
+  margin-right: 30vw;
+}
+
+.nav-bar .logo:active {
+  opacity: var(--active-opa);
+}
+
+.nav-bar .logo span {
+  color: var(--primary);
+}
+
+.nav-bar #burger-btn {
+  display: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.nav-bar .wrap-btn {
+  display: flex;
+}
+
+.nav-bar .wrap-btn div {
+  margin-left: 45px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.nav-bar .wrap-btn div:hover {
+  color: var(--primary);
+}
+
+.nav-bar .wrap-btn .active {
+  color: var(--primary);
+}
+
+.stick {
+  box-shadow: 0 0 10px #aaaaaa50;
+}
+
+@media screen and (max-width: 1200px) {
+  .nav-bar .logo {
+    margin-right: 15vw;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .nav-bar .logo {
+    margin-right: 4vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-bar {
+    padding: var(--top-margin) 30px 35px 30px;
+    /* margin: unset; */
+    /* position: relative; */
+    box-sizing: border-box;
+    /* border-bottom: 1px solid #aaa; */
+    /* z-index: 1; */
+    /* transition: border-bottom 0.2s ease-out; */
+  }
+
+  .nav-bar .logo {
+    margin: unset;
+    flex-grow: 1;
+  }
+
+  .nav-bar #burger-btn {
+    display: block;
+  }
+
+  .nav-bar .wrap-btn {
+    display: none;
+  }
+
+  .nav-bar .wrap-btn-phone {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    left: 0px;
+    transition: all 0.2s ease-out;
+  }
+
+  #main {
+    transition: all 0.2s ease-out;
+  }
+
+  .nav-bar .wrap-btn-phone div {
+    font-weight: 600;
+    margin: 30px 30px;
+    font-size: 20px;
+  }
+}
+
+.click-style:active {
+  opacity: var(--active-opa);
+}

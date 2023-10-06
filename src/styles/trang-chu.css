@@ -47,6 +47,138 @@
 
 .section-1-2 img {
   width: 45vw;
+  height: 33.8095238093vw;
+}
+
+/* 1400px */
+/* 1200px */
+/* 992px */
+/* 768px */
+/* 540px */
+
+/* SECTION 1 */
+
+.section-1 .img-phone {
+  display: none;
+}
+
+@media screen and (max-width: 1400px) {
+  .section-1 {
+    width: 77%
+  }
+
+  .section-1-1 {
+    transform: scale(0.9);
+  }
+
+  .section-1-2 {
+    right: -110px;
+  }
+
+
+  .section-1-2 img {
+    width: 50vw;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .section-1 {
+    width: 90%;
+    margin-left: 140px;
+  }
+
+  .section-1-1 {
+    margin-right: 20px;
+  }
+
+  .section-1-1 div:first-child {
+    font-size: 30px;
+  }
+
+  .section-1-1 div:last-child {
+    font-size: 18px;
+  }
+
+  .section-1-2 img {
+    width: 58vw;
+  }
+
+}
+
+@media screen and (max-width: 992px) {
+  .section-1 {
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .section-1-1 {
+    z-index: 1;
+    margin-right: 300px;
+  }
+
+  .section-1-2 img {
+    transform: scale(1);
+  }
+
+  .section-1 .img-desktop {
+    display: none;
+  }
+
+  .section-1 .img-phone {
+    display: block;
+  }
+
+  .section-1 .main-img {
+    z-index: 1;
+    margin-top: 40px;
+    height: 50vw;
+    border: var(--box-border);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--corner-1);
+  }
+
+  .section-1-1 {
+    margin: unset;
+    margin-bottom: 60px;
+  }
+
+  .section-1-1 div:first-child, .section-1-1 div:last-child{
+    width: unset;
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section-1 .main-img {
+    height: 60vw;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .section-1 {
+    margin-bottom: 120px;
+    height: unset;
+  }
+  
+  .section-1-1 div:first-child {
+    font-size: 35px;
+  }
+
+  .section-1-1 div:last-child {
+    width: unset;
+    font-size: 21px;
+  }
+
+  .section-1 .main-img {
+    margin-top: 20px;
+  }
 }
 
 /* SECTION 2 & SECTION 3 & SECTION-4 & SECTION 9*/

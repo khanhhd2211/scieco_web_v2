@@ -1,8 +1,10 @@
 'use client'
-import styles from '@/styles/navbar.module.css'
+import '@/styles/navbar.css'
 import Link from 'next/link';
 import debounce from '@/utils/debounce';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import BurgerBtn from '@/images/svg/burger-btn.svg'
 
 export default function NavBar () {
 	const [stick, setStick] = useState<boolean>(false);
@@ -23,15 +25,16 @@ export default function NavBar () {
 	}, [])
 
 	return (
-		<div className={`${styles.navbar} ${stick ? styles.stick : ''}`}>
-			<div className={styles.logo}><Link className="no-style-hlink" href="/"><span>S</span>ci<span>E</span>co</Link></div>
-			<div className={styles.wrapBtn}>
+		<div className={`nav-bar${stick ? " stick" : ''}`}>
+			<div className="logo"><Link className="no-style-hlink" href="/"><span>S</span>ci<span>E</span>co</Link></div>
+			<div className="wrap-btn">
 				<div><Link id="nav-btn-1" className="no-style-hlink" href="/">Trang chủ</Link></div>
 				<div><Link id="nav-btn-2" className="no-style-hlink" href="/dich-vu/">Dịch vụ</Link></div>
 				<div><Link id="nav-btn-5" className="no-style-hlink" href="/bai-viet/">Bài viết</Link></div>
 				<div><Link id="nav-btn-3" className="no-style-hlink" href="/ve-chung-toi/">Về chúng tôi</Link></div>
 				<div><Link id="nav-btn-4" className="no-style-hlink" href="/ket-noi/">Kết nối</Link></div>
 			</div>
+			<Image id="burger-btn" alt='burger button' src={BurgerBtn} width="39" height="39" />
 		</div>
 	);
 }

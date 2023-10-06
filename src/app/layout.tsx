@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { gilroy } from '@/fonts/fonts'
 import NavBar from '@/components/nav-bar'
+import Footer from '@/components/footer'
 
 // Google Font
 // import { Inter } from 'next/font/google'
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={gilroy.variable}>
         <NavBar />
         {children}
+        <Footer />
       </body>
     </html>
   )
