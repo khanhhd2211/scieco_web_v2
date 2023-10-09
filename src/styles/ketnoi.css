@@ -1,0 +1,65 @@
+.con-section {
+  color: var(--text-color);
+  display: grid;
+  grid-template-columns: 45% 45%;
+  gap: 10%;
+  width: 80%;
+  max-width: 1400px;
+  margin: auto;
+  margin-bottom: 200px;
+  height: calc(100vh - 120px);
+  justify-content: center;
+  align-items: center;
+}
+
+.con-section .heading-1 {
+  font-size: 55px;
+  font-weight: 700;
+  line-height: var(--line-height);
+}
+
+.con-section .logo {
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+.con-section .logo-des {
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 22px;
+}
+
+.con-section .des {
+  font-size: 18px;
+  line-height: var(--line-height);
+}
+
+.con-section .heading-2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.con-section .contact .des {
+  margin: 15px 0;
+}
+
+.con-section .contact .des b {
+  font-weight: 600;
+}
+
+.con-section .social-media .heading-2 {
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+  .con-section {
+    height: unset;
+  }
+  
+  .con-section > div {
+    width: 80%;
+  }
+}
+
