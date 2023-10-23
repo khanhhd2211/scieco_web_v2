@@ -53,10 +53,6 @@
   color: var(--primary);
 }
 
-.nav-bar .wrap-btn .active {
-  color: var(--primary);
-}
-
 .stick {
   box-shadow: 0 0 10px #aaaaaa50;
 }

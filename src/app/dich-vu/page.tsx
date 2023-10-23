@@ -12,17 +12,18 @@ import NextBlue from "@/images/svg/next-blue.svg";
 import Ser1Image from "@/images/service-img/service-1.svg"
 import Stata from "@/images/svg/stata.svg"
 import R from "@/images/svg/R.svg"
+import Link from "next/link";
+
+export interface IService {
+  id: number;
+  name: string;
+  img: string;
+  link: string;
+  des: string;
+  shortDes: string;
+}
 
 export default function DichVu() {
-  interface IService {
-    id: number;
-    name: string;
-    img: string;
-    link: string;
-    des: string;
-    shortDes: string;
-  }
-
   const dataService: IService[] = [
     {
       id: 11,
@@ -55,19 +56,20 @@ export default function DichVu() {
     },
   ];
 
-  function BoxService(props: { index: number; key: number; service: IService }) {
-    const { key, service, index } = props;
+  function BoxService(props: { index: number; service: IService }) {
+    const { service, index } = props;
+    
     return (
-      <div key={key} className="box">
+      <div className="box">
         <div>
           <div className="heading">
             <span>Dịch vụ {index + 1}</span>: {service.name}
           </div>
           <div className="des">{service.des}</div>
-          <a href={service.link} className="btn no-style-hlink">
+          <Link href={`/dich-vu/${service.id}`} className="btn no-style-hlink">
             <div>Tìm hiểu thêm</div>
             <Image alt="next-blue" width={22} height={22} src={NextBlue} />
-          </a>
+          </Link>
         </div>
         <Image alt='service image' width="400" height="400" loading="lazy" src={service.img} />
       </div>

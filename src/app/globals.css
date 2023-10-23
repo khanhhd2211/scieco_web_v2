@@ -32,6 +32,10 @@ body {
   font-family: var(--font);
 }
 
+.active {
+  color: var(--primary) !important;
+}
+
 .full_page {
   width: 100%;
   height: calc(100vh - 120px);

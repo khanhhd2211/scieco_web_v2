@@ -6,8 +6,7 @@
   width: 80%;
   max-width: 1400px;
   margin: auto;
-  margin-bottom: 200px;
-  height: calc(100vh - 120px);
+  height: 100vh;
   justify-content: center;
   align-items: center;
 }
@@ -56,6 +55,10 @@
 @media screen and (max-width: 1200px) {
   .con-section {
     height: unset;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 120px 0;
   }
   
   .con-section > div {
