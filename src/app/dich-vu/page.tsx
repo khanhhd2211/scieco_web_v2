@@ -23,38 +23,39 @@ export interface IService {
   shortDes: string;
 }
 
+const dataService: IService[] = [
+  {
+    id: 11,
+    name: "Tư vấn, hỗ trợ thực hiện nghiên cứu khoa học",
+    // img: "@/images/service-img/service-1.svg",
+    img: Ser1Image,
+    link: "/dich-vu/dich-vu-1.html",
+    des: "Cùng đồng hành, hỗ trợ nghiên cứu khoa học bằng tư vấn, xây dựng và phát triển theo quy mô của đề tài, tư vấn xuất bản, tư vấn sử dụng phần mềm định lượng.",
+    shortDes:
+      "Cùng đồng hành, hỗ trợ nghiên cứu khoa học bằng tư vấn, xây dựng và phát triển theo quy mô của đề tài.",
+  },
+  {
+    id: 13,
+    name: "Thành thạo phân tích dữ liệu cùng STATA",
+    img: Stata,
+    link: "/dich-vu/dich-vu-2.html",
+    des: "Trang bị kỹ năng sử dụng STATA thông qua thực hành và tập trung vào các case study với dữ liệu thực tế.",
+    shortDes:
+      "Trang bị kỹ năng sử dụng STATA thông qua thực hành và tập trung vào các case study với dữ liệu thực tế.",
+  },
+  {
+    id: 14,
+    name: "Thành thạo phân tích dữ liệu ngôn ngữ R",
+    img: R,
+    // img: "@/service/svg/R.svg,
+    link: "/dich-vu/dich-vu-3.html",
+    des: "Trang bị kỹ năng sử dụng ngôn ngữ R thông qua thực hành và tập trung vào các case study với dữ liệu thực tế.",
+    shortDes:
+      "Trang bị kỹ năng sử dụng ngôn ngữ R thông qua thực hành và tập trung vào các case study với dữ liệu thực tế.",
+  },
+];
+
 export default function DichVu() {
-  const dataService: IService[] = [
-    {
-      id: 11,
-      name: "Tư vấn, hỗ trợ thực hiện nghiên cứu khoa học",
-      // img: "@/images/service-img/service-1.svg",
-			img: Ser1Image,
-      link: "/dich-vu/dich-vu-1.html",
-      des: "Cùng đồng hành, hỗ trợ nghiên cứu khoa học bằng tư vấn, xây dựng và phát triển theo quy mô của đề tài, tư vấn xuất bản, tư vấn sử dụng phần mềm định lượng.",
-      shortDes:
-        "Cùng đồng hành, hỗ trợ nghiên cứu khoa học bằng tư vấn, xây dựng và phát triển theo quy mô của đề tài.",
-    },
-    {
-      id: 13,
-      name: "Thành thạo phân tích dữ liệu cùng STATA",
-			img: Stata,
-      link: "/dich-vu/dich-vu-2.html",
-      des: "Trang bị kỹ năng sử dụng STATA thông qua thực hành và tập trung vào các case study với dữ liệu thực tế.",
-      shortDes:
-        "Trang bị kỹ năng sử dụng STATA thông qua thực hành và tập trung vào các case study với dữ liệu thực tế.",
-    },
-    {
-      id: 14,
-      name: "Thành thạo phân tích dữ liệu ngôn ngữ R",
-			img: R,
-      // img: "@/service/svg/R.svg,
-      link: "/dich-vu/dich-vu-3.html",
-      des: "Trang bị kỹ năng sử dụng ngôn ngữ R thông qua thực hành và tập trung vào các case study với dữ liệu thực tế.",
-      shortDes:
-        "Trang bị kỹ năng sử dụng ngôn ngữ R thông qua thực hành và tập trung vào các case study với dữ liệu thực tế.",
-    },
-  ];
 
   function BoxService(props: { index: number; service: IService }) {
     const { service, index } = props;
